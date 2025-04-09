@@ -14,7 +14,6 @@ const Navbar = () => {
             <div className='d-flex gap-4'>
             <div className=' '><i className="fa-solid fa-gear"></i></div>
             <Link to={'/about'} /><i className="fa-solid fa-user fa-2x"></i>
-
             </div>
         </div>
             
