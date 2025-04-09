@@ -19,7 +19,7 @@ function App() {
       <Route path='/first_nav' element={<Navbar />} />
       <Route path='/about' element={<Profile />} />
       <Route path='/folder' element={<Folder />} />
-      <Route path='/remain' element={<Remainder />} />
+      <Route path='/remind' element={<Remainder />} />
       <Route path='/trash' element={<Trash />} />
       <Route path='/set' element={<Settings />} />
       <Route path='/archive' element={<Archived />} />
