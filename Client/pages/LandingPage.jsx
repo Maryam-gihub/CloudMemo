@@ -1,23 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import SIdeNavbar from '../components/SIdeNavbar'
 
 const LandingPage = () => {
     return (
-        <div>
+        <div className=''>
             <Navbar />
-            <div style={{ backgroundColor: 'rgb(160,247,229)', }}>
-                <div>
-                    <ul className='fs-4 gap-3'>
-                        <div className=''><i className="fa-solid fa-file-lines me-4"></i> Notes</div>
-                        <div className=''><i class="fa-solid fa-folder-plus me-4"></i> Folder</div>
-                        <div className=''><i class="fa-regular fa-bell me-4"></i> Remainder</div>
-                        <div className=''><i class="fa-regular fa-trash-can me-4"></i> Trash</div>
-                        <div className=''><i class="fa-solid fa-box-archive me-4"></i> Archive</div>
-                    </ul>
-
+            <div className='d-flex mt-4 gap-5'>
+                <SIdeNavbar/>
+                <div className='border border-dark border-3 col-9 p-4'>
+                    <h1>My Notes</h1>
                 </div>
-                <h1 className='text-center'> My Notes </h1>
             </div>
         </div>
     )

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <div style={{ backgroundColor: 'rgb(238, 255, 251)', padding: '20px 0px' }} className='d-flex justify-content-between shadow px-5'>
-            <div className=''>
-            <Link to={'/about'}/><i className="fa-solid fa-bars"></i>
+            <div className='px-5'>
+            <Link to={'/about'}/><i className="fa-solid fa-bars fa-xl"></i>
             </div>
             <div className='position-relative w-100' style={{maxWidth: '500px'}}>
             <i className="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y text-muted ms-3"></i>
