@@ -13,7 +13,7 @@ const Navbar = () => {
             </div>
             <div className='d-flex gap-4'>
                 <div className=' '><i className="fa-solid fa-gear"></i></div>
-                <Link to={'/profile'} ><i className="fa-solid fa-user fa-2x"></i></Link> 
+                <Link to={'/profile'} ><i className="fa-solid fa-user fa-2x text-black"></i></Link> 
             </div>
         </div>
 
