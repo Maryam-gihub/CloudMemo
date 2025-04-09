@@ -9,7 +9,7 @@ const Trash = () => {
             <div className='d-flex mt-4 gap-5'>
                 <SIdeNavbar />
                 <div className='border border-dark border-3 col-9 p-4'>
-                    <h1>My Notes</h1>
+                    <h1>Notes in Trash will be deleted after 7 days automatically</h1>
                 </div>
             </div>
         </div>
