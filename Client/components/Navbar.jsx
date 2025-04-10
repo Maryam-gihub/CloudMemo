@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <div style={{ backgroundColor: 'rgb(238, 255, 251)', padding: '20px 0px' }} className='d-flex justify-content-between shadow px-5'>
+        <div style={{ backgroundColor: '#b7cacf', padding: '20px 0px' }} className='d-flex justify-content-between shadow px-5'>
             <div className='px-5'>
                 <Link to={'/about'} /><i className="fa-solid fa-bars fa-xl"></i>
             </div>
@@ -13,7 +13,7 @@ const Navbar = () => {
             </div>
             <div className='d-flex gap-4'>
                 <div className=' '><i className="fa-solid fa-gear"></i></div>
-                <Link to={'/profile'} ><i className="fa-solid fa-user fa-2x text-black"></i></Link> 
+                <Link to={'/about'} ><i className="fa-solid fa-user fa-2x text-black"></i></Link> 
             </div>
         </div>
 
