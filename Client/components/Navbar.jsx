@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <div style={{ backgroundColor: 'rgb(238, 255, 251)',width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3'>
+        <div style={{ backgroundColor: 'rgb(238, 255, 251)',width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100'>
             <div className=''>
                 <Link to={'/about'} /><i className="fa-solid fa-bars fa-xl"></i>
             </div>
