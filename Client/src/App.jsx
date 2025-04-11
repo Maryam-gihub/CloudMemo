@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import LandingPage from '../pages/LandingPage'
 import Navbar from '../components/Navbar'
-import Folder from '../pages/Folder'
 import Remainder from '../pages/Reminder'
 import Settings from '../pages/Settings'
 import Trash from '../pages/Trash'
@@ -16,7 +15,6 @@ function App() {
     <Routes>
       <Route path='/' element={<LandingPage />} />
       <Route path='/first_nav' element={<Navbar />} />
-      <Route path='/folder' element={<Folder />} />
       <Route path='/remind' element={<Remainder />} />
       <Route path='/trash' element={<Trash />} />
       <Route path='/set' element={<Settings />} />
