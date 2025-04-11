@@ -37,7 +37,7 @@ const Navbar = () => {
                 <input type="text" className="form-control ps-5 " placeholder="Search..." />
             </div>
             <div className='d-flex gap-4'>
-                <button onClick={loginWithGoogle} ><i className="fa-solid fa-user fa-2x"></i></button>
+                <button onClick={loginWithGoogle} ><i className="fa-solid fa-user fa-2x text-black"></i></button>
             </div>
         </div>
     );
