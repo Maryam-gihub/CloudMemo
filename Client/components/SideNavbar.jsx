@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const SIdeNavbar = () => {
 
+const SIdeNavbar = () => {
     const [note, setNote] = useState('')
     const [remind, setRemind] = useState('')
     const [trash, setTrash] = useState('')
