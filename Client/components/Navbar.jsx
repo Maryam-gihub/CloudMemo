@@ -12,7 +12,6 @@ const Navbar = () => {
                 <input type="text" className="form-control ps-5 " placeholder="Search..." />
             </div>
             <div className='d-flex gap-4'>
-                {/* <div className=' '><i className="fa-solid fa-gear" ></i></div> */}
                 <Link to={'/profile'} ><i className="fa-solid fa-user fa-2x text-black"></i></Link> 
             </div>
         </div>
