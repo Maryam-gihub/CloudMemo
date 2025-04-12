@@ -23,11 +23,7 @@ const Navbar = () => {
 
         useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            // console.log(currentUser.email.charAt(0).toUpperCase());
             setUser(currentUser)
-            
-            
-            // setLoading(false)
         })
         return () => unsubscribe()
     },
@@ -49,18 +45,6 @@ const Navbar = () => {
             return emails.map(n => n[0]).join('').toUpperCase().slice(0, 2);
         };
 
-        // const getColor = (str) => {
-        //     let hash = 0;
-        //     for (let i = 0; i < str.length; i++) {
-        //         hash = str.charCodeAt(i) + ((hash << 5) - hash);
-        //     }
-        //     const h = hash % 360;
-        //     return `hsl(${h}, 70%, 50%)`;
-        // };
-
-        // const backgroundColor = user?.email ? getColor(user.email) : '#ccc';
-        // const initials =  user?.displayName ? getInitials(user.displayName) :
-        //     user?.email ? getInitials(user.email.split('@')[0]) : '?';u
             }
 
 
@@ -87,8 +71,8 @@ const Navbar = () => {
                                 color: "2px solid #c1121f"
                             }} />
                     ) :
-                        <button onClick={loginWithGoogle} className='btn btn-link p-0 border-0 bg-transparent user-avatar ' 
-                        style={{ width: "40px", height: "40px", display: "flex", alignItems: "center", justifyContent: "center",fontSize:"16px",cursor:"pointer," }}>
+                        <button onClick={loginWithGoogle} className='btn btn-link ' 
+                        style={{width: "40px", height: "40px", display: "flex", alignItems: "center", justifyContent: "center",fontSize:"16px",cursor:"pointer," }}>
                             <i className="fa-solid fa-user fa-2x text-black"></i>
 
                         </button>
