@@ -6,9 +6,9 @@ const Reminder = () => {
     return (
         <div>
             <Navbar />
-            <div className='d-flex mt-2 gap-2'>
+            <div className='d-flex gap-2'>
                 <SIdeNavbar />
-                <div className='col-9 p-4'>
+                <div className='col-10 mx-auto p-4'>
                     <div>
                         <div className='d-flex'>
                             <input type="text" className='col-lg-6 py-lg-2 px-lg-4 px-3 rounded-3 col-12 mx-auto border border-dark shadow' />

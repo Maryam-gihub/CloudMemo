@@ -7,9 +7,9 @@ const Archived = () => {
   return (
     <div>
       <Navbar />
-      <div className='d-flex mt-2 gap-1'>
+      <div className='d-flex gap-1'>
         <SIdeNavbar />
-        <div className='col-9 p-4'>
+        <div className='col-10 mx-auto p-4'>
           <div className='d-flex'>
             <input type="text" className='col-lg-6 py-lg-2 px-lg-4 px-3 rounded-3 col-12 mx-auto border border-dark shadow' />
           </div>

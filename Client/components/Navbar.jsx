@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
         return (
-            <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100'>
+            <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100 position-fixed start-0 top-0'>
                 <div className=''>
                     <i className="fa-solid fa-bars fa-xl"></i>
                 </div>
