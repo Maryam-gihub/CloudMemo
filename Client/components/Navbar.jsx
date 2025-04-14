@@ -50,9 +50,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
     }
 
-    // const Layout = () => {
-    //     const [isOpen, setIsOpen] = useState(true)
-    // }
+
     return (
         <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100'>
             <div className='' >

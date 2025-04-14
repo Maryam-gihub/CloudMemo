@@ -15,9 +15,7 @@ const SIdeNavbar = ({isOpen}) => {
 
     }
     return (
-        <div className={`col-lg-2 ${isOpen ? '': ''} col-3 px-lg-5 shadow  `} style={{ minHeight: '91vh'}} >
-            {/* isOpen={isOpen} */}
-            {/* {isOpen ? 'Trash' : ''} */}
+        <div className='col-lg-2 col-3 px-lg-5 shadow flex flex-wrap position-fixed overflow-y-auto' style={{ height: '91vh'}}>
             <div className='fs-4 gap-3 '>
                 <Link to={'/'} > <button className='mt-2 btn  fw-bold fs-lg-5 fs-6' onChange={(e) => setNote(e.target.value)} value={note}><i className="fa-solid fa-file-lines me-4"></i>  Notes</button></Link>
                 <Link to={'/remind'} > <button className='mt-2 btn  fw-bold fs-lg-5 fs-6 ' onChange={(e) => setRemind(e.target.value)} value={remind}><i className="fa-regular fa-bell me-4"></i> Reminder </button></Link>
