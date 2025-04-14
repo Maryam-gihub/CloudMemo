@@ -10,11 +10,12 @@ import Note from '../pages/note'
 
 
 
+
 function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<LandingPage />} />
+      <Route path='/' element={<LandingPage/>}/>
       <Route path='/first_nav' element={<Navbar />} />
       <Route path='/remind' element={<Remainder />} />
       <Route path='/trash' element={<Trash />} />
