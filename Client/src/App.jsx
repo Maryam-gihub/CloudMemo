@@ -1,3 +1,4 @@
+import { useEffect, useState} from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import LandingPage from '../pages/LandingPage'
@@ -12,6 +13,21 @@ import Note from '../pages/note'
 
 
 function App() {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => {
+          console.log(`SW registered: ${reg}`);
+          console.log(reg);
+        })
+        .catch(regError => {
+          console.log(`SW registration failed: ${regError}`);
+          console.log(regError);
+        })
+    }
+  }, [])
 
   return (
     <Routes>
