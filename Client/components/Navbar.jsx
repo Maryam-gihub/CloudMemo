@@ -20,6 +20,7 @@ const provider = new GoogleAuthProvider();
 
 const Navbar = ({ isOpen, setIsOpen }) => {
     const [user, setUser] = useState(null)
+    // console.log("Navbar props:", { isOpen, setIsOpen });
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -32,7 +33,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     const loginWithGoogle = async () => {
         try {
             await signInWithPopup(auth, provider);
-            console.log("User:", result.user);
+            console.log("User:", result.user)
         } catch (err) {
             console.error("Login error", err);
         }
@@ -46,47 +47,41 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         };
 
     }
-    const logoutUser = () => {
+    // const logoutUser = () => {
 
-    }
+    // }
 
 
     return (
         <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100'>
-            <div className='' >
-                <button  className='btn' onClick={() => setIsOpen(!isOpen)} ><i className="fa-solid fa-bars fa-xl"></i></button>
-            </div>
+            <nav >
+                <button  className='btn' onClick={() => setIsOpen( !isOpen)} >
+                    <i className="fa-solid fa-bars fa-xl"></i></button>
+            </nav>
+        
             <div className='position-relative w-100 mx-4' style={{ maxWidth: '500px' }}>
                 <i className="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y text-muted ms-3"></i>
                 <input type="text" className="form-control ps-5 " placeholder="Search..." />
             </div>
             <div className='d-flex gap-4 align-items-center'>
                 {user?.photoURL ? (
-                    <div class="dropdown">
-                        {/* <button class="btn rounded-full   " type="button" data-bs-toggle="dropdown" aria-expanded="false"> */}
-                            <img
-                                src={user.photoURL}
-                                alt='profile'
-                                className='rounded-circle'
-                                style={{
-                                    width: '40px',
-                                    height: "40px",
-                                    objectFit: 'cover',
-                                    fontSize: "20px",
-                                    color: "2px solid #c1121f"
-                                }} />
-                        {/* </button> */}
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div>
+
+                    <img
+                        src={user.photoURL}
+                        alt='profile'
+                        className='rounded-circle'
+                        style={{
+                            width: '40px',
+                            height: "40px",
+                            objectFit: 'cover',
+                            fontSize: "20px",
+                            color: "2px solid #c1121f"
+                        }} />
+
                 ) :
                     <button onClick={loginWithGoogle} className='btn btn-link '
                         style={{ width: "40px", height: "40px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", cursor: "pointer," }}>
                         <i className="fa-solid fa-user fa-2x text-black"></i>
-
                     </button>
                 }
             </div>

@@ -9,11 +9,14 @@ const SIdeNavbar = ({isOpen}) => {
     const [trash, setTrash] = useState('')
     const [archive, setArchive] = useState('')
 
-    const addFolder = () => {
-        console.log(box);
+
+    if (!isOpen) return null;
+
+    // const addFolder = () => {
+    //     console.log(box);
         
 
-    }
+    // }
     return (
         <div className='col-lg-2 col-3 px-lg-5 shadow flex flex-wrap position-fixed overflow-y-auto' style={{ height: '91vh'}}>
             <div className='fs-4 gap-3 '>
