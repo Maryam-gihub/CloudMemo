@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Navbar from './Navbar'
-import SIdeNavbar from './SideNavbar'
+import SIdeNavbar from './SIdeNavbar'
 
 const Layout = () => {
     const[isOpen, setIsOpen] = useState(true)

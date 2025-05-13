@@ -10,7 +10,7 @@ const SIdeNavbar = ({isOpen}) => {
     const [archive, setArchive] = useState('')
 
 
-    if (!isOpen) return null;
+    // if (!isOpen) return null;
 
     // const addFolder = () => {
     //     console.log(box);
