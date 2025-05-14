@@ -20,6 +20,7 @@ const Reminder = () => {
     
     return (
         <div>
+            <Navbar/>
             <div className='d-flex gap-2'>
                 <SIdeNavbar />
                 <div className='col-lg-9 col-11 ps-25 pt-4 mx-auto'>
