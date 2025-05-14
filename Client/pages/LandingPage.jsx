@@ -22,9 +22,7 @@ const LandingPage = () => {
     }
     return (
         <div className='w-100'>
-            <Navbar />
             <div className='d-flex '>
-                <SIdeNavbar />
                 <div className='col-lg-8 col-8 ps-5 p-4 mx-auto'>
                     <div className='d-flex mx-auto justify-content-center gap-2'>
                         <input type="text" onChange={(e) => setFolder(e.target.value)} value={Folder} className='col-lg-6 py-lg-2 px-lg-4 px-3 rounded-3 col-10 border border-dark shadow' />

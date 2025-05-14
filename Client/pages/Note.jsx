@@ -6,7 +6,6 @@ const note = () => {
     return (
         <div>
             <div className='w-100'>
-                <Navbar/>
                 <div className='d-flex  gap-2'>
                     <SIdeNavbar/>
                     <div className='col-8 mx-auto p-4 mt-3 ps-5'>

@@ -58,7 +58,6 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 <button  className='btn' onClick={() => setIsOpen( !isOpen)} >
                     <i className="fa-solid fa-bars fa-xl"></i></button>
             </nav>
-        
             <div className='position-relative w-100 mx-4' style={{ maxWidth: '500px' }}>
                 <i className="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y text-muted ms-3"></i>
                 <input type="text" className="form-control ps-5 " placeholder="Search..." />
@@ -77,7 +76,6 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                             fontSize: "20px",
                             color: "2px solid #c1121f"
                         }} />
-
                 ) :
                     <button onClick={loginWithGoogle} className='btn btn-link '
                         style={{ width: "40px", height: "40px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", cursor: "pointer," }}>

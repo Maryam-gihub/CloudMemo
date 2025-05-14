@@ -6,7 +6,7 @@ import SIdeNavbar from '../components/SIdeNavbar'
 const Archived = () => {
   return (
     <div>
-      <Navbar />
+
       <div className='d-flex gap-1'>
         <SIdeNavbar />
         <div className='col-10 mx-auto p-4'>

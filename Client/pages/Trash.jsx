@@ -5,7 +5,7 @@ import SIdeNavbar from '../components/SIdeNavbar'
 const Trash = () => {
     return (
         <div>
-            <Navbar />
+
             <div className='d-flex gap-2'>
                 <SIdeNavbar />
                 <div className='col-10 mx-auto p-4'>
