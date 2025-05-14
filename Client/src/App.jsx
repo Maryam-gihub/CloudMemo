@@ -6,14 +6,14 @@ import Remainder from '../pages/Reminder'
 import Settings from '../pages/Settings'
 import Trash from '../pages/Trash'
 import Archived from '../pages/Archived'
-import Note from '../pages/note'
+import Note from '../pages/Note'
 import Layout from '../components/Layout'
+
 
 
 
 function App() {
   const [count, setCount] = useState(0)
-
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
@@ -30,14 +30,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout />}/>
         <Route index element={<LandingPage />} />
         <Route path="/remind" element={<Remainder />} />
         <Route path="/trash" element={<Trash />} />
         <Route path="/set" element={<Settings />} />
         <Route path="/archive" element={<Archived />} />
         <Route path="/note" element={<Note />} />
-      </Route>
     </Routes>
   )
 }
