@@ -10,15 +10,8 @@ const SIdeNavbar = ({isOpen}) => {
     const [archive, setArchive] = useState('')
 
 
-    // if (!isOpen) return null;
-
-    // const addFolder = () => {
-    //     console.log(box);
-        
-
-    // }shadow
     return (
-        <div className='col-lg-2 col-3 px-lg-5  flex flex-wrap position-fixed overflow-y-auto' style={{ height: '101vh'}}>
+        <div className='col-lg-2 col-3 px-lg-5  flex flex-wrap position-relative overflow-y-auto shadow' style={{ height: '101vh'}}>
             <div className='fs-4 gap-3 '>
                 <Link to={'/'} > <button className='mt-2 btn  fw-bold fs-lg-5 fs-6' onChange={(e) => setNote(e.target.value)} value={note}><i className="fa-solid fa-file-lines me-4"></i>  Notes</button></Link>
                 <Link to={'/remind'} > <button className='mt-2 btn  fw-bold fs-lg-5 fs-6 ' onChange={(e) => setRemind(e.target.value)} value={remind}><i className="fa-regular fa-bell me-4"></i> Reminder </button></Link>
