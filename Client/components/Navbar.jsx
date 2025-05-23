@@ -50,7 +50,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
 
     return (
-        <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100'>
+        <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3'>
             <div className='d-flex gap-4 align-items-center'>
                 {user?.photoURL ? (
 
@@ -76,7 +76,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 <i className="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y text-muted ms-3"></i>
                 <input type="text" className="form-control ps-5 " placeholder="Search..." />
             </div>
-            <nav >
+            <div>
                 <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 " type="button">
                     <span className="sr-only">Open user menu</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-gear fw-bold" viewBox="0 0 16 16">
@@ -98,7 +98,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </div>
         </div>
     );
 };
