@@ -22,35 +22,53 @@ const LandingPage = () => {
     }
     return (
         <div className='w-100'>
-            <Navbar/>
+            <Navbar />
             <div className='d-flex '>
                 <SIdeNavbar />
                 <div className='col-lg-10 col-11 pt-4 mx-auto'>
                     <div className='d-flex mx-auto justify-content-center gap-2'>
-                        <input type="text" onChange={(e) => setFolder(e.target.value)} value={Folder} placeholder = 'Kindly Input Folder name' className='col-lg-6 py-lg-2 px-lg-4 px-3 bg-white rounded-3 col-7 border border-dark shadow fw-bold text-capitalize'/>
+                        <input type="text" onChange={(e) => setFolder(e.target.value)} value={Folder} placeholder='Kindly Input Folder name' className='col-lg-6 py-lg-2 px-lg-4 px-3 bg-white rounded-3 col-7 border border-dark shadow fw-bold text-capitalize' />
                         <button className='btn shadow' onClick={add} id='plus' style={{ backgroundColor: 'black' }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-plus-lg text-light fw-bold" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
                             </svg>
                         </button>
                     </div>
                     <div className='mt-5 ms-lg-5 gap-lg-5 gap-4 d-flex flex-row flex-wrap justify-content-center'>
-                    {Container.map((Folder, index) => (
-                            <button className='col-lg-2 col-5 p-lg-5 p-2 border border-dark border-3 text-break' style={{ backgroundColor: 'red' }}>
-                            <Link to={'/note'}><p className='bg-light fw-bold px-3 text-dark text-capitalize'>{Folder}</p></Link>
-                                {/* <select name="" id="" >
-                                    <option value="" className = 'fs-6'>Edit</option>
-                                    <option value="" className = 'fs-6'>Delete</option>
-                                </select> */}
-                            </button>
-                    ))}
+                        {Container.map((Folder, index) => (
+                            <div key={index} className='col-lg-2 col-5 p-lg-5 p-2 border border-dark border-3 text-break' style={{ backgroundColor: 'red'}}>
+                                <Link to={'/note'}><p className='bg-light fw-bold px-3 text-dark text-capitalize'>{Folder}</p></Link>
+                                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" className="inline-flex items-center p-2 text-sm font-medium text-center  rounded-lg  focus:ring-4 focus:outline-none" type="button">
+                                    <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 4 15">
+                                        <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                    </svg>
+                                </button>
+
+                                <div id="dropdownDots" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                        </li>
+                                    </ul>
+                                    <div className="py-2">
+                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                     <div className='d-flex justify-content-center align-items-center' style={{ height: '60vh', display: 'block' }}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"  id = 'lol' fill="currentColor" className="bi bi-plus-lg text-secondary text-opacity-75" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" id='lol' fill="currentColor" className="bi bi-plus-lg text-secondary text-opacity-75" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
                         </svg>
                     </div>
-                    <p className='text-center fw-bold fs-4 text-secondary text-opacity-50' id = 'msg' style = {{display: 'block'}}>Create a folder.......</p>
+                    <p className='text-center fw-bold fs-4 text-secondary text-opacity-50' id='msg' style={{ display: 'block' }}>Create a folder.......</p>
                 </div>
             </div>
         </div>
@@ -59,3 +77,5 @@ const LandingPage = () => {
 }
 
 export default LandingPage
+
+

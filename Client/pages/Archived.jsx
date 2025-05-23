@@ -9,7 +9,7 @@ const Archived = () => {
       <Navbar/>
       <div className='d-flex gap-1'>
         <SIdeNavbar />
-        <div className='col-lg-10 col-11 ps-25 pt-4 mx-auto'>
+        <div className='col-lg-10 col-11  pt-4 mx-auto'>
           <div className='d-flex'>
             <input type="text" className='col-lg-6 py-lg-2 px-lg-4 px-3 rounded-3 col-12 mx-auto border border-dark shadow' />
           </div>

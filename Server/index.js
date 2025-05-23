@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-app.get()
+// app.get()
 
 
 
-app.listen(4000,(req, res) => {
+app.listen(4000,() => {
     console.log('server is running perfectly');
     
 })
