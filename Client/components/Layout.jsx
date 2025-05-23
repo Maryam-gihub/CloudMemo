@@ -10,8 +10,10 @@ const Layout = () => {
     return (
         <div className='flex-grow-1'>
             <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+            {/* <div className='d-flex gap-1'>  */}
             <SIdeNavbar isOpen={isOpen} />
             <div className=''><Outlet /></div>
+            {/* </div> */}
         </div>
     )
 }

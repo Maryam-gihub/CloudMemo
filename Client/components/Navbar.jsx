@@ -20,7 +20,7 @@ const provider = new GoogleAuthProvider();
 
 const Navbar = ({ isOpen, setIsOpen }) => {
     const [user, setUser] = useState(null)
-    // console.log("Navbar props:", { isOpen, setIsOpen });
+
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -47,10 +47,6 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         };
 
     }
-    // const logoutUser = () => {
-
-    // }
-
 
     return (
         <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3 W-100'>

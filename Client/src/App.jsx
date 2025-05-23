@@ -30,13 +30,14 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}/>
+      <Route path="/" element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path="/remind" element={<Remainder />} />
         <Route path="/trash" element={<Trash />} />
         <Route path="/set" element={<Settings />} />
         <Route path="/archive" element={<Archived />} />
         <Route path="/note" element={<Note />} />
+      </Route>
     </Routes>
   )
 }
