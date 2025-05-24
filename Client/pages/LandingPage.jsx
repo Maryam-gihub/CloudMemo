@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
-import SIdeNavbar from '../components/SIdeNavbar'
+import SIdeNavbar from '../components/SdeNavbar'
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
@@ -41,15 +41,9 @@ const LandingPage = () => {
     }, [dropdownOpen])
 
     return (
-<<<<<<< HEAD
-        <div className='w-100'>
-            {/* <Navbar/> */}
-            <div className='d-flex '>
-=======
         <div className="w-">
             <Navbar />
             <div className="d-flex">
->>>>>>> c55c6ce67710f88eb21931d7754e4f9b15bb05ad
                 <SIdeNavbar />
                 <div className="col-lg-10 col-11 pt-4 mx-auto">
                     <div className="d-flex mx-auto justify-content-center gap-2">
@@ -70,7 +64,7 @@ const LandingPage = () => {
                         {container.map((name, index) => (
                             <div
                                 key={index}
-                                className="col-lg-2 col-5 p-lg-5 p-2 border border-dark border-3 text-break position-relative"
+                                className="col-lg-2 col-5 p-lg-5 p-2 border-dark border-3 text-break position-relative"
                                 style={{ backgroundColor: 'red' }}
                                 ref={(el) => (dropdownRefs.current[index] = el)}
                             >

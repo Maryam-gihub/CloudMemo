@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 
 
 const SIdeNavbar = () => {
-
-
     if (!isOpen) return null;
+
 
     return (
             <div className='fs-4 gap-3 '>

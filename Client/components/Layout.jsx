@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
-import SIdeNavbar from './Sidenavbar'
+import SIdeNavbar from './SIdeNavbar'
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {

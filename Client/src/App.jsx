@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import LandingPage from '../pages/LandingPage'
-import Remainder from '../pages/Reminder'
 import Settings from '../pages/Settings'
 import Trash from '../pages/Trash'
 import Archived from '../pages/Archived'
 import Note from '../pages/Note'
+import Reminder from '../pages/Reminder'
 
 
 
@@ -31,7 +31,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<LandingPage />} />
-        <Route path="/remind" element={<Remainder />} />
+        <Route path='/remind' element={<Reminder/>}/>
         <Route path="/trash" element={<Trash />} />
         <Route path="/set" element={<Settings />} />
         <Route path="/archive" element={<Archived />} />
