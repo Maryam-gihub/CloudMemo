@@ -7,7 +7,6 @@ import Settings from '../pages/Settings'
 import Trash from '../pages/Trash'
 import Archived from '../pages/Archived'
 import Note from '../pages/Note'
-import Layout from '../components/Layout'
 
 
 
