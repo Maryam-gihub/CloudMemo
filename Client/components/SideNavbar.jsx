@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const SIdeNavbar = () => {
+const SideNavbar = () => {
     if (!isOpen) return null;
 
 
@@ -18,4 +18,4 @@ const SIdeNavbar = () => {
     )
 }
 
-export default SIdeNavbar
+export default SideNavbar

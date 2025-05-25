@@ -1,6 +1,6 @@
-import Navbar from '../components/Navbar'
+import Navbar from './components/Navbar'
 import { useState } from 'react'
-import SIdeNavbar from '../components/Sidenavbar'
+import SideNavbar from './SideNavbar'
 
 
 const Reminder = () => {
@@ -26,7 +26,7 @@ const Reminder = () => {
         <div>
             <Navbar />
             <div className='d-flex gap-2'>
-                <SIdeNavbar/>
+                <SideNavbar/>
                 <div className='col-lg-9 col-11 pt-4 mx-auto'>
                     <div className='border-3 border-dark mt-lg-5 mx-auto col-7 p-4 rounded-4' style={{ backgroundColor: 'red' }}>
                         <h1 className='text-center fw-bold fs-4'>Set Reminder</h1>

@@ -1,13 +1,12 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import SIdeNavbar from '../components/SIdeNavbar'
+import SideNavbar from './SideNavbar'
+
 
 const Trash = () => {
     return (
         <div>
-            {/* <Navbar/> */}
             <div className='d-flex gap-2'>
-                <SIdeNavbar />
+                <SideNavbar />
                 <div className='col-lg-10 col-11 ps-25 pt-4 mx-auto'>
                     <h3 className='text-center text-secondary fst-italic fs-5'>Trash will be deleted after 7 days automatically</h3>
                     <div className='d-flex justify-content-center align-items-center' style={{height: '60vh'}}>

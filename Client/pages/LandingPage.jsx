@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
-import SIdeNavbar from '../components/SdeNavbar'
+import SideNavbar from "../components/SideNavbar";
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
@@ -44,7 +44,7 @@ const LandingPage = () => {
         <div className="w-">
             <Navbar />
             <div className="d-flex">
-                <SIdeNavbar />
+                <SideNavbar />
                 <div className="col-lg-10 col-11 pt-4 mx-auto">
                     <div className="d-flex mx-auto justify-content-center gap-2">
                         <input
