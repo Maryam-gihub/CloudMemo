@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from '.react'
-import Navbar from '../../components/Navbar'
-import SideNavbar from "../../components/SideNavbar";
+import Navbar from '../components/Navbar'
+import SideNavbar from "../components/SideNavbar";
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {

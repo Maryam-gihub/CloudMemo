@@ -1,7 +1,6 @@
-import Navbar from './components/Navbar'
+import Navbar from '../components/Navbar'
 import { useState } from 'react'
-import SideNavbar from './SideNavbar'
-
+import SideNavbar from '../components/SideNavbar'
 
 const Reminder = () => {
     const [remind, setRemind] = useState('')
