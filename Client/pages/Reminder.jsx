@@ -42,7 +42,7 @@ const Reminder = () => {
                         <h1 className='text-center mt-lg-5 mt-3 fw-bold text-decoration-underline fs-5'>Task Reminder Table</h1>
                         <table className='table table-bordered table-striped mx-auto border-3 border-dark mt-5 fs-5 shadow'>
                             <thead>
-                                <tr className='text-white border border-dark border-3 fs-6'>
+                                <tr className='text-white border-dark border-3 fs-6'>
                                     <th>S/N</th>
                                     <th>Task</th>
                                     <th>Time/Date</th>

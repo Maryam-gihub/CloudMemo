@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import LandingPage from './pages/LandingPage';
-import Settings from '../pages/Settings';
-import Trash from '../pages/Trash';
-import Archived from '../pages/Archived';
-import Note from '../pages/Note';
-import Reminder from '../pages/Reminder';
-import Layout from './components/Layout';
+import LandingPage from './pages/LandingPage'
+import Settings from './pages/Settings'
+import Trash from './pages/Trash'
+import Archived from './pages/Archived'
+import Note from './pages/Note'
+import Reminder from './pages/Reminder'
+import Layout from './components/Layout'
 
 
 
@@ -30,8 +30,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<LandingPage />} />
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<LandingPage />}/>
         <Route path='/remind' element={<Reminder/>}/>
         <Route path="/trash" element={<Trash />} />
         <Route path="/set" element={<Settings />} />
