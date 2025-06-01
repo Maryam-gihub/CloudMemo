@@ -7,7 +7,7 @@ import Trash from './pages/Trash'
 import Archived from './pages/Archived'
 import Note from './pages/Note'
 import Reminder from './pages/Reminder'
-import Layout from './components/Layout'
+import Layout from '../components/Layout'
 
 
 
