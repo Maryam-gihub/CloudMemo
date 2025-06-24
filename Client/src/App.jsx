@@ -7,6 +7,7 @@ import Settings from '../pages/Settings'
 import Trash from '../pages/Trash'
 import Archived from '../pages/Archived'
 import Note from '../pages/Note'
+import Rem from '../pages/rem'
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/set" element={<Settings />} />
         <Route path="/archive" element={<Archived />} />
         <Route path="/note" element={<Note />} />
+        <Route path= "/rem" element= {<Rem/>} />
     </Routes>
   )
 }

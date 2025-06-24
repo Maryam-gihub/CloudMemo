@@ -50,7 +50,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
 
     return (
-        <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%' }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3'>
+        <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%', position: 'fixed', top: 0, left: 0, zIndex: 1050 }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3'>
             <div className='d-flex gap-4 align-items-center'>
                 {user?.photoURL ? (
 

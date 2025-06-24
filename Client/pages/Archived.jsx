@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import SIdeNavbar from '../components/SIdeNavbar'
+import SideNavbar from '../components/SIdeNavbar'
 
 
 const Archived = () => {
   return (
     <div>
       <Navbar/>
-      <div className='d-flex gap-1'>
-        <SIdeNavbar />
+      <div className='d-flex gap-1 lg:mt-20'>
+        <SideNavbar />
         <div className='col-lg-10 col-11  pt-4 mx-auto'>
           <div className='d-flex'>
             <input type="text" className='col-lg-6 py-lg-2 px-lg-4 px-3 rounded-3 col-12 mx-auto border border-dark shadow' />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
-import SIdeNavbar from '../components/SIdeNavbar'
 import { Link } from 'react-router-dom'
+import SideNavbar from '../components/SIdeNavbar'
 
 const LandingPage = () => {
     const [folder, setFolder] = useState('')
@@ -9,6 +9,22 @@ const LandingPage = () => {
     const [showMsg, setShowMsg] = useState(true)
     const [dropdownOpen, setDropdownOpen] = useState(null)
     const dropdownRefs = useRef([])
+
+
+    const colors = [
+        '#4CAF50',
+        '#2196F3',
+        '#FF9800',
+        '#9C27B0',
+        '#F44336',
+        '#00BCD4',
+        '#FFC107',
+        '#8BC34A',
+        '#E91E63',
+        '#3F51B5',
+        'white',
+        'brown'
+    ]
 
     const add = () => {
         if (folder === '') {
@@ -19,6 +35,7 @@ const LandingPage = () => {
             setShowMsg(false)
         }
     }
+
 
     const toggleDropdown = (index) => {
         setDropdownOpen(dropdownOpen === index ? null : index)
@@ -41,11 +58,11 @@ const LandingPage = () => {
     }, [dropdownOpen])
 
     return (
-        <div className="w-">
+        <div className="w-100">
             <Navbar />
-            <div className="d-flex">
-                <SIdeNavbar />
-                <div className="col-lg-10 col-11 pt-4 mx-auto">
+            <div className="d-flex" style={{ minHeight: '100vh' }}>
+                <SideNavbar />
+                <div className="col-lg-10 col-8 pt-4 mx-auto lg:mt-20" >
                     <div className="d-flex mx-auto justify-content-center gap-2">
                         <input
                             type="text"
@@ -60,16 +77,16 @@ const LandingPage = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="mt-5 ms-lg-5 gap-lg-5 gap-4 d-flex flex-row flex-wrap justify-content-center">
+                    <div className="mt-5 lg:ms-35 gap-lg-5 gap-4 d-flex flex-row flex-wrap justify-content-center">
                         {container.map((name, index) => (
                             <div
                                 key={index}
-                                className="col-lg-2 col-5 p-lg-5 p-2 border border-dark border-3 text-break position-relative"
-                                style={{ backgroundColor: 'red' }}
+                                className="col-lg-2 col-4 col-md-3 p-lg-5 p-2  border-dark shadow border-3 text-break position-relative"
+                                style={{ backgroundColor: colors[index % colors.length] }}
                                 ref={(el) => (dropdownRefs.current[index] = el)}
                             >
                                 <Link to="/note">
-                                    <p className="bg-light fw-bold px-3 text-dark text-capitalize">{name}</p>
+                                    <p className="bg-light fw-bold px-3 text-dark text-capitalize" style = {{fontSize: '0.9em'}}>{name}</p>
                                 </Link>
                                 <button
                                     onClick={() => toggleDropdown(index)}
@@ -80,15 +97,16 @@ const LandingPage = () => {
                                     </svg>
                                 </button>
                                 {dropdownOpen === index && (
-                                    <div className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 position-absolute">
-                                        <ul className="fs-6 text-gray-700">
+                                    <div className="z-10 bg-white rounded-lg shadow-sm w-30  border-dark border-2 position-absolute">
                                             <button>
-                                                <p className="block py-1 text-decoration-none text-info fw-bold hover:bg-gray-100">Archive</p>
-                                            </button> <br/>
+                                                <p className="block px-1 text-decoration-none text-dark ms-4 fw-bold mt-3 hover:bg-green-200">Rename</p>
+                                            </button> <br />
                                             <button>
-                                                <p className="block py-1 text-decoration-none text-danger fw-bold hover:bg-gray-100">Delete</p>
+                                                <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Archive</p>
+                                            </button> <br />
+                                            <button>
+                                                <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Delete</p>
                                             </button>
-                                        </ul>
                                     </div>
                                 )}
                             </div>
