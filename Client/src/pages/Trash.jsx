@@ -1,14 +1,25 @@
 import React from 'react'
+<<<<<<< HEAD:Client/pages/Trash.jsx
 import Navbar from '../components/Navbar'
 import SideNavbar from '../components/SIdeNavbar'
+=======
+import SideNavbar from './SideNavbar'
+
+>>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/Trash.jsx
 
 const Trash = () => {
     return (
         <div>
+<<<<<<< HEAD:Client/pages/Trash.jsx
             <Navbar/>
             <div className='d-flex gap-2 lg:mt-20'>
                 <SideNavbar />
                 <div className='col-lg-10 col-11 ps-25 pt-4 mx-auto '>
+=======
+            <div className='d-flex gap-2'>
+                <SideNavbar />
+                <div className='col-lg-10 col-11 ps-25 pt-4 mx-auto'>
+>>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/Trash.jsx
                     <h3 className='text-center text-secondary fst-italic fs-5'>Trash will be deleted after 7 days automatically</h3>
                     <div className='d-flex justify-content-center align-items-center' style={{height: '60vh'}}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" className="bi bi-trash3 text-secondary text-opacity-50" viewBox="0 0 16 16">
