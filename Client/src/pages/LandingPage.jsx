@@ -1,11 +1,7 @@
-import React, { useState, useEffect, useRef } from '.react'
+import React, { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
-<<<<<<< HEAD:Client/pages/LandingPage.jsx
-=======
-import SideNavbar from "../components/SideNavbar";
->>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/LandingPage.jsx
 import { Link } from 'react-router-dom'
-import SideNavbar from '../components/SIdeNavbar'
+import SideNavbar from '../components/SideNavbar'
 
 const LandingPage = () => {
     const [folder, setFolder] = useState('')
@@ -64,15 +60,9 @@ const LandingPage = () => {
     return (
         <div className="w-100">
             <Navbar />
-<<<<<<< HEAD:Client/pages/LandingPage.jsx
             <div className="d-flex" style={{ minHeight: '100vh' }}>
                 <SideNavbar />
                 <div className="col-lg-10 col-8 pt-4 mx-auto lg:mt-20" >
-=======
-            <div className="d-flex">
-                <SideNavbar />
-                <div className="col-lg-10 col-11 pt-4 mx-auto">
->>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/LandingPage.jsx
                     <div className="d-flex mx-auto justify-content-center gap-2">
                         <input
                             type="text"
@@ -91,13 +81,8 @@ const LandingPage = () => {
                         {container.map((name, index) => (
                             <div
                                 key={index}
-<<<<<<< HEAD:Client/pages/LandingPage.jsx
                                 className="col-lg-2 col-4 col-md-3 p-lg-5 p-2  border-dark shadow border-3 text-break position-relative"
                                 style={{ backgroundColor: colors[index % colors.length] }}
-=======
-                                className="col-lg-2 col-5 p-lg-5 p-2 border-dark border-3 text-break position-relative"
-                                style={{ backgroundColor: 'red' }}
->>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/LandingPage.jsx
                                 ref={(el) => (dropdownRefs.current[index] = el)}
                             >
                                 <Link to="/note">

@@ -1,22 +1,13 @@
 import React from 'react'
-<<<<<<< HEAD:Client/pages/Archived.jsx
 import Navbar from '../components/Navbar'
-import SideNavbar from '../components/SIdeNavbar'
-=======
-import SideNavbar from './SideNavbar'
->>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/Archived.jsx
+import SideNavbar from '../components/SideNavbar'
 
 
 const Archived = () => {
   return (
     <div>
-<<<<<<< HEAD:Client/pages/Archived.jsx
       <Navbar/>
       <div className='d-flex gap-1 lg:mt-20'>
-=======
-      {/* <Navbar/> */}
-      <div className='d-flex gap-1'>
->>>>>>> a476f2cea82082ee0321aceb43b1f5e59399505d:Client/src/pages/Archived.jsx
         <SideNavbar />
         <div className='col-lg-10 col-11  pt-4 mx-auto'>
           <div className='d-flex'>

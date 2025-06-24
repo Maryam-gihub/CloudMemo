@@ -1,19 +1,20 @@
-import React, { useState } from 'react'
-import Navbar from './Navbar'
-import { Outlet } from 'react-router-dom';
-import SideNavbar from './SideNavbar'
-
-const Layout = () => {
-    const [isOpen, setIsOpen] = useState(true)
+// import React, { useState } from 'react'
+// import Navbar from './Navbar'
+// import { Outlet } from 'react-router-dom';
+// import SideNavbar from '../components/SideNavbar';
 
 
-    return (
-        <div className='flex-grow-1'>
-            <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-            <SideNavbar isOpen={isOpen} />
-            <div className=''><Outlet /></div>
-        </div>
-    )
-}
+// const Layout = () => {
+//     const [isOpen, setIsOpen] = useState(true)
 
-export default Layout
+
+//     return (
+//         <div className='flex-grow-1'>
+//             <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+//             <SideNavbar isOpen={isOpen} />
+//             <div className=''><Outlet /></div>
+//         </div>
+//     )
+// }
+
+// export default Layout
