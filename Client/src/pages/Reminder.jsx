@@ -27,8 +27,8 @@ const Reminder = () => {
             <Navbar />
             <div className='d-flex gap-2'>
                 <SideNavbar />
-                <div className='col-lg-9 col-11 pt-4 mx-auto lg:mt-20' style={{ marginLeft: '260px', paddingTop: '80px' }}>
-                    <div className='shadow mt-lg-5 mx-auto col-7 p-4 rounded-4' style={{ backgroundColor: '#e0f7fa', border: '1px solid #b2ebf2' }}>
+                <div className='col-lg-9 col-11 pt-4 mx-auto lg:mt-20'>
+                    <div className='shadow mt-lg-5 ms-30 mt-15 lg:mx-auto col-lg-7 col-8 p-4 rounded-4' style={{ backgroundColor: '#e0f7fa', border: '1px solid #b2ebf2' }}>
                         <h1 className='text-center fw-bold fs-4' style={{ color: '#006064' }}>💡 What's on your mind? </h1>
                         <input type="text" className='form-control border border-dark mt-5 text-capitalize fw-bold' style={{ backgroundColor: '#fff', color: '#263238' }} placeholder='Visit a friend...' onChange={(e) => setRemind(e.target.value)} value={remind} /> <br />
                         <input type="datetime-local" className='form-control border border-dark text-capitalize fw-bold' style={{ backgroundColor: '#fff', color: '#263238' }} onChange={(e) => setTime(e.target.value)} value={time} /> <br />
@@ -40,8 +40,8 @@ const Reminder = () => {
                     </div>
                     {/* Reminders Display as Cards */}
                     {array.length > 0 && (
-                        <div className="mt-5 lg:ms-50">
-                            <h5 className="fw-bold text-center mb-4">📋 Your Reminders</h5>
+                        <div className="mt-5 ms-35 lg:ms-30">
+                            <h5 className="fw-bold text-center mb-4 underline"> 📋 Your Reminders 📋 </h5>
                             <div className="d-flex flex-wrap gap-3 justify-content-start">
                                 {array.map((all, index) => (
                                     <div
@@ -49,8 +49,9 @@ const Reminder = () => {
                                         className="shadow-sm rounded-3 p-3"
                                         style={{
                                             width: '220px',
-                                            backgroundColor: '#fef4f8',
-                                            borderLeft: '5px solid #f06292'
+                                            background: '#f8fffe',
+                                            borderLeft: '4px solid #b2ebf2',
+                                            color: '#263238'
                                         }}
                                     >
                                         <h6 className="fw-bold text-capitalize">{all.remind}</h6>

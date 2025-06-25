@@ -12,18 +12,18 @@ const LandingPage = () => {
 
 
     const colors = [
-        '#4CAF50',
-        '#2196F3',
-        '#FF9800',
-        '#9C27B0',
-        '#F44336',
-        '#00BCD4',
-        '#FFC107',
-        '#8BC34A',
-        '#E91E63',
-        '#3F51B5',
-        'white',
-        'brown'
+        'Green',      
+        'Blue',          
+        'Orange',        
+        'Purple',       
+        'Red',           
+        'Gold',          
+        'Gray',        
+        'Cyan',   
+        'Pink',          
+        'Indigo',        
+        'White',         
+        'Brown'
     ]
 
     const add = () => {
@@ -62,8 +62,8 @@ const LandingPage = () => {
             <Navbar />
             <div className="d-flex" style={{ minHeight: '100vh' }}>
                 <SideNavbar />
-                <div className="col-lg-10 col-8 pt-4 mx-auto lg:mt-20" >
-                    <div className="d-flex mx-auto justify-content-center gap-2">
+                <div className="col-lg-10 col-8 pt-4 mt-5 ms-35 lg:mx-auto" >
+                    <div className="d-flex mx-auto justify-content-center gap-2 lg:mt-10">
                         <input
                             type="text"
                             onChange={(e) => setFolder(e.target.value)}
@@ -77,7 +77,7 @@ const LandingPage = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="mt-5 lg:ms-35 gap-lg-5 gap-4 d-flex flex-row flex-wrap justify-content-center">
+                    <div className="mt-5  lg:ms-35 gap-lg-5 gap-4 d-flex flex-row flex-wrap justify-content-center">
                         {container.map((name, index) => (
                             <div
                                 key={index}
@@ -86,7 +86,7 @@ const LandingPage = () => {
                                 ref={(el) => (dropdownRefs.current[index] = el)}
                             >
                                 <Link to="/note">
-                                    <p className="bg-light fw-bold px-3 text-dark text-capitalize" style = {{fontSize: '0.9em'}}>{name}</p>
+                                    <p className="bg-light fw-bold px-3 text-dark text-capitalize" style={{ fontSize: '0.9em' }}>{name}</p>
                                 </Link>
                                 <button
                                     onClick={() => toggleDropdown(index)}
@@ -98,15 +98,15 @@ const LandingPage = () => {
                                 </button>
                                 {dropdownOpen === index && (
                                     <div className="z-10 bg-white rounded-lg shadow-sm w-30  border-dark border-2 position-absolute">
-                                            <button>
-                                                <p className="block px-1 text-decoration-none text-dark ms-4 fw-bold mt-3 hover:bg-green-200">Rename</p>
-                                            </button> <br />
-                                            <button>
-                                                <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Archive</p>
-                                            </button> <br />
-                                            <button>
-                                                <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Delete</p>
-                                            </button>
+                                        <button>
+                                            <p className="block px-1 text-decoration-none text-dark ms-4 fw-bold mt-3 hover:bg-green-200">Rename</p>
+                                        </button> <br />
+                                        <button>
+                                            <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Archive</p>
+                                        </button> <br />
+                                        <button>
+                                            <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Delete</p>
+                                        </button>
                                     </div>
                                 )}
                             </div>
