@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import SideNavbar from './SideNavbar'
+import Navbar from '../components/Navbar'
+import SideNavbar from '../components/SideNavbar'
 
-const note = () => {
-    return (
+const Note = () => {
+  return (
         <div>
             <div className='w-100'>
             <Navbar/>
@@ -19,7 +19,7 @@ const note = () => {
                 </div>
             </div>
         </div>
-    )
+  )
 }
 
-export default note
+export default Note

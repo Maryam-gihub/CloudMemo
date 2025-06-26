@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from '.react'
+import React, { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import SideNavbar from "../components/SideNavbar";
 import { Link } from 'react-router-dom'
@@ -22,7 +22,7 @@ const LandingPage = () => {
 
     const toggleDropdown = (index) => {
         setDropdownOpen(dropdownOpen === index ? null : index)
-    }
+    }   
 
     useEffect(() => {
         const handleClickOutside = (event) => {
