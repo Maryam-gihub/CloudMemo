@@ -38,32 +38,17 @@ const Reminder = () => {
                             </svg>
                         </button>
                     </div>
-                    {/* Reminders Display as Cards */}
                     {array.length > 0 && (
-                        <div className="mt-5 ms-35 lg:ms-30">
-                            <h5 className="fw-bold text-center mb-4 underline"> 📋 Your Reminders 📋 </h5>
+                        <div className="mt-5 ms-35 lg:ms-50">
+                            <h5 className="fw-bold text-center mb-4">📋 Your Reminders</h5>
                             <div className="d-flex flex-wrap gap-3 justify-content-start">
                                 {array.map((all, index) => (
-                                    <div
-                                        key={index}
-                                        className="shadow-sm rounded-3 p-3"
-                                        style={{
-                                            width: '220px',
-                                            background: '#f8fffe',
-                                            borderLeft: '4px solid #b2ebf2',
-                                            color: '#263238'
-                                        }}
-                                    >
+                                    <div key={index} className="shadow-sm rounded-3 p-3" style={{ width: '220px', backgroundColor: '#fef4f8', borderLeft: '5px solid #f06292' }} >
                                         <h6 className="fw-bold text-capitalize">{all.remind}</h6>
                                         <p className="small text-muted mb-2">
                                             {all.time}
                                         </p>
-                                        <button
-                                            className="btn btn-sm btn-outline-danger w-100"
-                                            // onClick={() => deleteReminder(item.id)}
-                                        >
-                                            🗑️ Delete
-                                        </button>
+                                        <button className="btn btn-sm btn-outline-danger w-100" > 🗑️ Delete </button>
                                     </div>
                                 ))}
                             </div>

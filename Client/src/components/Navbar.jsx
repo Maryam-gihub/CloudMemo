@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 
 
 const firebaseConfig = {
@@ -20,6 +20,7 @@ const provider = new GoogleAuthProvider();
 const Navbar = () => {
     const [user, setUser] = useState(null);
     const [showMenu, setShowMenu] = useState(false);
+    const menuRef = useRef(null);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -35,6 +36,28 @@ const Navbar = () => {
             console.error("Login error", err);
         }
     };
+
+    const handleSignOut = async () => {
+        try {
+            await signOut(auth);
+            setUser(null);
+        } catch (err) {
+            console.error("Sign out error", err);
+        }
+    };
+
+    useEffect(() => {
+        if (!showMenu) return;
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setShowMenu(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showMenu]);
 
     return (
         <div style={{ backgroundColor: 'rgb(238, 255, 251)', width: '100%', position: 'fixed', top: 0, left: 0, zIndex: 1 }} className='d-flex justify-content-between shadow py-lg-3 py-2 px-lg-5 px-3'>
@@ -75,16 +98,16 @@ const Navbar = () => {
                     </svg>
                 </button>
                 {showMenu && (
-                    <div className="z-10 bg-white rounded-lg shadow-sm w-44 position-absolute end-0 mt-2" style={{ minWidth: 180 }}>
+                    <div ref={menuRef} className="z-10 bg-white rounded-lg shadow-sm w-44 position-absolute end-0 mt-2" style={{ minWidth: 180 }}>
                         <ul className="py-2 text-sm m-0" style={{ listStyle: 'none' }}>
                             <li>
-                                <button className="block w-100 text-start px-4 py-2 btn btn-link text-dark fw-bold" style={{ textDecoration: 'none' }}>Dark mode</button>
+                                <button className="block w-100 text-start px-4 py-2 btn btn-link text-dark fw-bold" style={{ textDecoration: 'none' }} onClick={() => setDarkMode((prev) => !prev)}>{darkMode ? 'Light mode' : 'Dark mode'}</button>
                             </li>
                             <li>
                                 <button className="block w-100 text-start px-4 py-2 btn btn-link text-dark fw-bold" style={{ textDecoration: 'none' }}>Help</button>
                             </li>
                             <li>
-                                <button className="block w-100 text-start px-4 py-2 btn btn-link text-dark fw-bold" style={{ textDecoration: 'none' }}>Sign Out</button>
+                                <button className="block w-100 text-start px-4 py-2 btn btn-link text-dark fw-bold" style={{ textDecoration: 'none' }} onClick={handleSignOut}>Sign Out</button>
                             </li>
                         </ul>
                     </div>

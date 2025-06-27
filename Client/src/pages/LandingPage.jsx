@@ -7,7 +7,7 @@ const LandingPage = () => {
     const [folder, setFolder] = useState('')
     const [container, setContainer] = useState([])
     const [showMsg, setShowMsg] = useState(true)
-    const [dropdownOpen, setDropdownOpen] = useState(null)
+    const [activeDropdown, setActiveDropdown] = useState(null);
     const dropdownRefs = useRef([])
 
 
@@ -31,31 +31,27 @@ const LandingPage = () => {
             alert('Enter your folder name')
         } else {
             setContainer([...container, folder])
-            // setFolder('')
             setShowMsg(false)
         }
     }
-
-
-    const toggleDropdown = (index) => {
-        setDropdownOpen(dropdownOpen === index ? null : index)
-    }   
-
+    const handleDropdown = (idx) => {
+        setActiveDropdown(activeDropdown === idx ? null : idx);
+    };
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownOpen !== null) {
-                const dropdownElement = dropdownRefs.current[dropdownOpen]
+            if (activeDropdown !== null) {
+                const dropdownElement = dropdownRefs.current[activeDropdown];
                 if (dropdownElement && !dropdownElement.contains(event.target)) {
-                    setDropdownOpen(null)
+                    setActiveDropdown(null);
                 }
             }
-        }
+        };
 
-        document.addEventListener('mousedown', handleClickOutside)
+        document.addEventListener('mousedown', handleClickOutside);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
-        }
-    }, [dropdownOpen])
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [activeDropdown])
 
     return (
         <div className="w-100">
@@ -78,34 +74,34 @@ const LandingPage = () => {
                         </button>
                     </div>
                     <div className="mt-5  lg:ms-35 gap-lg-5 gap-4 d-flex flex-row flex-wrap justify-content-center">
-                        {container.map((name, index) => (
+                        {container.map((name, idx) => (
                             <div
-                                key={index}
+                                key={idx}
                                 className="col-lg-2 col-4 col-md-3 p-lg-5 p-2  border-dark shadow border-3 text-break position-relative"
-                                style={{ backgroundColor: colors[index % colors.length] }}
-                                ref={(el) => (dropdownRefs.current[index] = el)}
+                                style={{ backgroundColor: colors[idx % colors.length] }}
+                                ref={(el) => (dropdownRefs.current[idx] = el)}
                             >
                                 <Link to="/note">
                                     <p className="bg-light fw-bold px-3 text-dark text-capitalize" style={{ fontSize: '0.9em' }}>{name}</p>
                                 </Link>
                                 <button
-                                    onClick={() => toggleDropdown(index)}
+                                    onClick={() => handleDropdown(idx)}
                                     className="inline-flex items-center p-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none"
                                 >
                                     <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 4 15">
                                         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
                                     </svg>
                                 </button>
-                                {dropdownOpen === index && (
-                                    <div className="z-10 bg-white rounded-lg shadow-sm w-30  border-dark border-2 position-absolute">
+                                {activeDropdown === idx && (
+                                    <div className="z-10 bg-white rounded-lg shadow-sm w-30 border-dark border-2 position-absolute">
                                         <button>
-                                            <p className="block px-1 text-decoration-none text-dark ms-4 fw-bold mt-3 hover:bg-green-200">Rename</p>
+                                            <p className="block px-1 text-dark ms-4 fw-bold mt-3 hover:bg-green-200">Rename</p>
                                         </button> <br />
                                         <button>
-                                            <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Archive</p>
+                                            <p className="block p-1 text-dark ms-4 fw-bold hover:bg-green-200">Archive</p>
                                         </button> <br />
-                                        <button>
-                                            <p className="block p-1 text-decoration-none text-dark ms-4 fw-bold hover:bg-green-200">Delete</p>
+                                        <button onClick={() => deleteNote(idx)}>
+                                            <p className="block p-1 text-dark ms-4 fw-bold hover:bg-green-200">Delete</p>
                                         </button>
                                     </div>
                                 )}
